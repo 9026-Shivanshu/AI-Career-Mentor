@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profile | AI Career Mentor</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/profile.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-graduation-cap"></i>
+
+            <h2>AI Career Mentor</h2>
+
+        </div>
+
+        <ul>
+
+            <li onclick="location.href='dashboard.html'">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </li>
+
+            <li onclick="location.href='resume.html'">
+                <i class="fa-solid fa-file"></i>
+                Resume Analyzer
+            </li>
+
+            <li class="active">
+                <i class="fa-solid fa-user"></i>
+                Profile
+            </li>
+
+            <li id="logoutBtn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="main">
+
+        <h1>My Profile</h1>
+
+        <!-- Profile Card -->
+
+        <div class="profile-card">
+
+            <div class="avatar">
+
+                <i class="fa-solid fa-user"></i>
+
+            </div>
+
+            <div class="info">
+
+                <h2 id="profileName">Student</h2>
+
+                <p id="profileEmail">Email</p>
+
+            </div>
+
+        </div>
+
+        <!-- Resume Summary -->
+
+        <div class="summary">
+
+            <div class="summary-box">
+
+                <h3>Latest ATS Score</h3>
+
+                <h2 id="latestScore">0%</h2>
+
+            </div>
+
+            <div class="summary-box">
+
+                <h3>Total Resumes</h3>
+
+                <h2 id="resumeCount">0</h2>
+
+            </div>
+
+        </div>
+
+        <!-- Resume History -->
+
+        <div class="history-card">
+
+            <h2>Resume History</h2>
+
+            <table class="history-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Resume Name</th>
+                        <th>ATS Score</th>
+                        <th>Upload Date</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="historyBody">
+
+                    <tr>
+
+                        <td colspan="3" style="text-align:center">
+
+                            No Resume Uploaded
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="js/profile.js"></script>
+
+</body>
+
+</html>

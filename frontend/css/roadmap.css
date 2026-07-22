@@ -1,0 +1,500 @@
+/* =====================================
+AI Career Mentor - Roadmap
+===================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Poppins",sans-serif;
+}
+
+body{
+
+background:#0b1020;
+color:#fff;
+
+}
+
+.container{
+
+width:90%;
+max-width:1200px;
+margin:auto;
+
+}
+
+/* =====================================
+Navbar
+===================================== */
+
+header{
+
+background:#111827;
+padding:20px 0;
+position:sticky;
+top:0;
+z-index:1000;
+
+}
+
+.navbar{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+}
+
+.logo{
+
+display:flex;
+align-items:center;
+gap:12px;
+
+}
+
+.logo i{
+
+font-size:30px;
+color:#6C63FF;
+
+}
+
+.logo h2{
+
+font-size:30px;
+font-weight:700;
+
+}
+
+nav{
+
+display:flex;
+gap:30px;
+
+}
+
+nav a{
+
+text-decoration:none;
+color:#d1d5db;
+font-weight:500;
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#6C63FF;
+
+}
+
+nav .active{
+
+color:#6C63FF;
+
+}
+
+/* =====================================
+Hero
+===================================== */
+
+.hero{
+
+padding:90px 20px;
+text-align:center;
+
+background:linear-gradient(135deg,#111827,#1f2937);
+
+}
+
+.hero h1{
+
+font-size:55px;
+margin-bottom:20px;
+
+}
+
+.hero p{
+
+font-size:20px;
+color:#cbd5e1;
+
+}
+/* =====================================
+Career Selection Card
+===================================== */
+
+.career-box{
+
+padding:70px 20px;
+
+}
+
+.card{
+
+max-width:700px;
+
+margin:auto;
+
+background:#1a2235;
+
+padding:40px;
+
+border-radius:20px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.35);
+
+text-align:center;
+
+}
+
+.card h2{
+
+font-size:34px;
+
+margin-bottom:25px;
+
+}
+
+.card select{
+
+width:100%;
+
+padding:16px;
+
+border:none;
+
+outline:none;
+
+border-radius:12px;
+
+background:#101827;
+
+color:#fff;
+
+font-size:17px;
+
+margin-bottom:25px;
+
+cursor:pointer;
+
+}
+
+.card select:focus{
+
+border:2px solid #6C63FF;
+
+}
+
+.card button{
+
+width:100%;
+
+padding:16px;
+
+border:none;
+
+border-radius:12px;
+
+background:linear-gradient(90deg,#5b5ef7,#8b5cf6);
+
+color:#fff;
+
+font-size:18px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.card button:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 12px 30px rgba(108,99,255,.35);
+
+}
+
+/* =====================================
+Roadmap Section
+===================================== */
+
+.roadmap{
+
+padding:20px 20px 80px;
+
+}
+
+#roadmapContainer{
+
+max-width:1000px;
+
+margin:auto;
+
+background:#1a2235;
+
+padding:40px;
+
+border-radius:20px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.35);
+
+}
+
+#roadmapContainer h2{
+
+font-size:38px;
+
+margin-bottom:20px;
+
+}
+
+#roadmapContainer p{
+
+font-size:18px;
+
+line-height:1.8;
+
+color:#cbd5e1;
+
+}
+/* =====================================
+Timeline Design
+===================================== */
+
+.timeline{
+
+margin-top:40px;
+
+position:relative;
+
+}
+
+.timeline-item{
+
+position:relative;
+
+padding:25px 25px 25px 80px;
+
+margin-bottom:30px;
+
+background:#202b3d;
+
+border-radius:18px;
+
+transition:.3s;
+
+overflow:hidden;
+
+}
+
+.timeline-item:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+.timeline-item::before{
+
+content:"";
+
+position:absolute;
+
+left:30px;
+
+top:35px;
+
+width:18px;
+
+height:18px;
+
+background:#6C63FF;
+
+border-radius:50%;
+
+z-index:2;
+
+}
+
+.timeline-item::after{
+
+content:"";
+
+position:absolute;
+
+left:38px;
+
+top:52px;
+
+width:3px;
+
+height:calc(100% + 25px);
+
+background:#6C63FF;
+
+opacity:.4;
+
+}
+
+.timeline-item:last-child::after{
+
+display:none;
+
+}
+
+.timeline-item h3{
+
+font-size:24px;
+
+margin-bottom:12px;
+
+color:#fff;
+
+}
+
+.timeline-item p{
+
+font-size:16px;
+
+line-height:1.8;
+
+color:#cbd5e1;
+
+}
+
+/* =====================================
+Progress Badge
+===================================== */
+
+.badge{
+
+display:inline-block;
+
+padding:8px 18px;
+
+background:#6C63FF;
+
+border-radius:30px;
+
+font-size:14px;
+
+font-weight:600;
+
+margin-bottom:15px;
+
+}
+
+/* =====================================
+Roadmap Skills
+===================================== */
+
+.skill-list{
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:12px;
+
+margin-top:18px;
+
+}
+
+.skill{
+
+padding:10px 18px;
+
+background:#101827;
+
+border:1px solid rgba(108,99,255,.35);
+
+border-radius:30px;
+
+font-size:14px;
+
+transition:.3s;
+
+}
+
+.skill:hover{
+
+background:#6C63FF;
+
+cursor:pointer;
+
+}
+
+/* =====================================
+Responsive
+===================================== */
+
+@media(max-width:768px){
+
+.navbar{
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+nav{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:18px;
+
+}
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.hero p{
+
+font-size:16px;
+
+}
+
+.card{
+
+padding:25px;
+
+}
+
+.card h2{
+
+font-size:28px;
+
+}
+
+.timeline-item{
+
+padding:20px 20px 20px 65px;
+
+}
+
+.timeline-item h3{
+
+font-size:20px;
+
+}
+
+#roadmapContainer{
+
+padding:25px;
+
+}
+
+}

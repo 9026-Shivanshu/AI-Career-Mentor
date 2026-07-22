@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | AI Career Mentor</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/login.css">
+
+</head>
+
+<body>
+
+<div class="login-container">
+
+    <!-- Left Side -->
+
+    <div class="left-panel">
+
+        <h1>AI Career Mentor</h1>
+
+        <p>
+
+            Build your dream career with AI-powered Resume Analysis,
+            Mock Interviews and Career Guidance.
+
+        </p>
+
+        <img src="assets/images/login.png" alt="Login">
+
+    </div>
+
+    <!-- Right Side -->
+
+    <div class="right-panel">
+
+        <form id="loginForm">
+
+            <h2>Welcome Back 👋</h2>
+
+            <p>Login to continue your journey.</p>
+
+            <div class="input-box">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                <input
+                type="email"
+                id="email"
+                placeholder="Email Address"
+                required>
+
+            </div>
+            <small id="emailError" class="error-message"></small>
+           <div class="input-box">
+
+    <i class="fa-solid fa-lock"></i>
+
+    <input
+        type="password"
+        id="password"
+        placeholder="Password"
+        required>
+
+    <i
+        class="fa-solid fa-eye toggle-password"
+        id="togglePassword">
+    </i>
+
+</div>
+
+            <div class="options">
+
+                <label>
+
+                    <input
+    type="checkbox"
+    id="rememberMe">
+                    Remember Me
+
+                </label>
+
+                <a href="forgot-password.html">Forgot Password?</a>
+
+            </div>
+
+            <button
+    type="submit"
+    id="loginBtn">
+    Login
+</button>
+
+            <div class="or">
+
+                OR
+
+            </div>
+
+         <button type="button" class="google-btn">
+    <img src="assets/images/google-logo.svg" alt="Google">
+    <span>Continue with Google</span>
+</button>
+
+            <div class="register">
+
+                Don't have an account?
+
+                <a href="register.html">
+
+                    Register
+
+                </a>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+<!-- Toast Notification -->
+
+<div id="toast" class="toast">
+
+    <i id="toastIcon" class="fa-solid fa-circle-check"></i>
+
+    <span id="toastMessage">
+        Success
+    </span>
+
+</div>
+<script src="js/login.js"></script>
+
+</body>
+
+</html>

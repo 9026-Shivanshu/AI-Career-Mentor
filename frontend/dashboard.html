@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | AI Career Mentor</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-graduation-cap"></i>
+
+            <h2>AI Career Mentor</h2>
+
+        </div>
+
+        <ul>
+
+            <li class="active" onclick="location.href='dashboard.html'">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </li>
+
+            <li onclick="location.href='resume.html'">
+                <i class="fa-solid fa-file"></i>
+                Resume Builder
+            </li>
+
+            <li onclick="location.href='ats.html'">
+                <i class="fa-solid fa-chart-column"></i>
+                ATS Score
+            </li>
+
+           <li onclick="location.href='mock-interview.html'">
+    <i class="fa-solid fa-microphone"></i>
+    Mock Interview
+</li>
+
+            <li onclick="location.href='career-roadmap.html'">
+                <i class="fa-solid fa-road"></i>
+                Career Roadmap
+            </li>
+
+            <li onclick="location.href='jobs.html'">
+                <i class="fa-solid fa-briefcase"></i>
+                Jobs
+            </li>
+
+            <li onclick="location.href='profile.html'">
+                <i class="fa-solid fa-user"></i>
+                Profile
+            </li>
+
+            <li id="logoutBtn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="main">
+
+        <div class="header">
+
+            <h1>
+
+                Welcome,
+
+                <span id="userName">
+
+                    Student
+
+                </span>
+
+                👋
+
+            </h1>
+
+            <p>
+
+                AI Powered Career Guidance Platform
+
+            </p>
+
+        </div>
+
+        <!-- Statistics -->
+
+        <div class="stats">
+
+            <div class="card">
+
+                <h3>Resume Score</h3>
+
+                <h2 id="resumeScore">0%</h2>
+
+            </div>
+
+            <div class="card">
+
+                <h3>ATS Score</h3>
+
+                <h2 id="atsScore">0%</h2>
+
+            </div>
+
+            <div class="card">
+
+    <h3>Interview Score</h3>
+
+    <h2 id="interviewScore">0%</h2>
+
+</div>
+
+            <div class="card">
+
+    <h3>Total Interviews</h3>
+
+    <h2 id="totalInterviews">0</h2>
+
+</div>
+
+        </div>
+
+        <!-- Quick Actions -->
+
+        <div class="actions">
+
+            <div class="action-card"
+                onclick="location.href='resume.html'">
+
+                📄
+
+                <h3>Resume Builder</h3>
+
+            </div>
+
+            <div class="action-card"
+    onclick="location.href='mock-interview.html'">
+
+    🎤
+
+    <h3>Mock Interview</h3>
+
+</div>
+
+            <div class="action-card"
+               onclick="location.href='career-roadmap.html'">
+
+                🛣
+
+                <h3>Career Roadmap</h3>
+
+            </div>
+
+            <div class="action-card"
+                onclick="location.href='jobs.html'">
+
+                💼
+
+                <h3>Jobs</h3>
+
+            </div>
+
+        </div>
+<!-- ================= Interview History ================= -->
+
+<section class="history-section">
+
+    <div class="history-header">
+
+        <h2>Interview History</h2>
+
+        <p>Your previous mock interview results.</p>
+
+    </div>
+
+    <div class="history-table">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Date</th>
+
+                    <th>Interview Type</th>
+
+                    <th>Difficulty</th>
+
+                    <th>Score</th>
+
+                    <th>Confidence</th>
+
+                    <th>Communication</th>
+
+                    <th>Grammar</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="historyTable">
+
+                <tr>
+
+                    <td colspan="7" style="text-align:center;">
+
+                        Loading Interview History...
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+    </main>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

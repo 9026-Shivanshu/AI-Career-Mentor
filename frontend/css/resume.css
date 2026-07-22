@@ -1,0 +1,1186 @@
+/* =========================================
+   AI CAREER MENTOR
+   Resume Module v3
+   Part 1
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#0F172A;
+
+    color:#F8FAFC;
+
+    display:flex;
+
+    min-height:100vh;
+
+}
+
+/* =========================================
+Sidebar
+========================================= */
+
+.sidebar{
+
+    width:270px;
+
+    background:#111827;
+
+    border-right:1px solid #334155;
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    height:100vh;
+
+    overflow-y:auto;
+
+    padding:25px;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:40px;
+
+}
+
+.logo i{
+
+    font-size:34px;
+
+    color:#2563EB;
+
+}
+
+.logo h2{
+
+    font-size:22px;
+
+    font-weight:700;
+
+}
+
+/* Menu */
+
+.sidebar ul{
+
+    list-style:none;
+
+}
+
+.sidebar ul li{
+
+    margin-bottom:12px;
+
+}
+
+.sidebar ul li a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    text-decoration:none;
+
+    color:#CBD5E1;
+
+    padding:14px 18px;
+
+    border-radius:12px;
+
+    transition:.35s;
+
+}
+
+.sidebar ul li a i{
+
+    width:22px;
+
+    text-align:center;
+
+}
+
+.sidebar ul li a:hover{
+
+    background:#2563EB;
+
+    color:#fff;
+
+}
+
+.sidebar ul li.active a{
+
+    background:#2563EB;
+
+    color:#fff;
+
+}
+
+/* =========================================
+Main Content
+========================================= */
+
+.main-content{
+
+    margin-left:270px;
+
+    width:calc(100% - 270px);
+
+    padding:35px;
+
+}
+
+/* =========================================
+Navbar
+========================================= */
+
+.top-navbar{
+
+    background:#1E293B;
+
+    border:1px solid #334155;
+
+    border-radius:18px;
+
+    padding:25px 30px;
+
+    margin-bottom:30px;
+
+}
+
+.top-navbar h1{
+
+    font-size:30px;
+
+    margin-bottom:8px;
+
+}
+
+.top-navbar p{
+
+    color:#CBD5E1;
+
+}
+
+/* =========================================
+Hero Card
+========================================= */
+
+.hero-card{
+
+    background:linear-gradient(135deg,#2563EB,#7C3AED);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+}
+
+.hero-left{
+
+    width:70%;
+
+}
+
+.hero-left h2{
+
+    font-size:34px;
+
+    margin-bottom:18px;
+
+}
+
+.hero-left p{
+
+    line-height:1.8;
+
+    font-size:16px;
+
+}
+
+.hero-right{
+
+    font-size:90px;
+
+    opacity:.25;
+
+}
+
+/* =========================================
+Quick Actions
+========================================= */
+
+.quick-actions{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:35px;
+
+}
+
+.quick-actions button{
+
+    flex:1;
+
+    min-width:220px;
+
+    background:#1E293B;
+
+    border:1px solid #334155;
+
+    color:#fff;
+
+    padding:18px;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.quick-actions button i{
+
+    margin-right:10px;
+
+}
+
+.quick-actions button:hover{
+
+    transform:translateY(-4px);
+
+    background:#2563EB;
+
+    border-color:#2563EB;
+
+}
+
+/* =========================================
+Scrollbar
+========================================= */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#2563EB;
+
+    border-radius:20px;
+
+}
+
+/* =========================================
+Responsive
+========================================= */
+
+@media(max-width:1000px){
+
+.sidebar{
+
+    width:90px;
+
+}
+
+.logo h2{
+
+    display:none;
+
+}
+
+.sidebar ul li a{
+
+    justify-content:center;
+
+}
+
+.sidebar ul li a span{
+
+    display:none;
+
+}
+
+.main-content{
+
+    margin-left:90px;
+
+    width:calc(100% - 90px);
+
+}
+
+.hero-card{
+
+    flex-direction:column;
+
+    text-align:center;
+
+    gap:25px;
+
+}
+
+.hero-left{
+
+    width:100%;
+
+}
+
+}
+
+@media(max-width:700px){
+
+.main-content{
+
+    padding:20px;
+
+}
+
+.top-navbar h1{
+
+    font-size:24px;
+
+}
+
+.hero-left h2{
+
+    font-size:26px;
+
+}
+
+.quick-actions{
+
+    flex-direction:column;
+
+}
+
+}
+/* =========================================
+   Resume Form Section
+========================================= */
+.resume-form{
+    margin:0 0 30px 0;
+}
+
+.form-card{
+
+    width:100%;
+    background:#1E293B;
+    border:1px solid #334155;
+    border-radius:18px;
+    padding:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+
+}
+
+.form-card h2{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:28px;
+
+    color:#F8FAFC;
+
+    font-size:24px;
+
+}
+
+.form-card h2 i{
+
+    color:#2563EB;
+
+}
+
+/* =========================================
+   Grid
+========================================= */
+
+.grid-2{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(250px,1fr));
+    gap:20px;
+}
+
+/* =========================================
+   Form Group
+========================================= */
+.form-group{
+    display:flex;
+    flex-direction:column;
+    min-width:0;
+}
+
+.form-group label{
+
+    margin-bottom:10px;
+
+    color:#CBD5E1;
+
+    font-weight:500;
+
+    font-size:15px;
+
+}
+
+/* =========================================
+   Inputs
+========================================= */
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+
+    width:100%;
+    max-width:100%;
+
+    background:#0F172A;
+
+    border:1px solid #334155;
+
+    border-radius:12px;
+
+    padding:14px 16px;
+
+    color:#F8FAFC;
+
+    font-size:15px;
+
+    font-family:'Poppins',sans-serif;
+
+    transition:.30s;
+
+}
+
+textarea{
+
+    resize:vertical;
+
+    min-height:150px;
+
+}
+
+/* =========================================
+   Placeholder
+========================================= */
+
+input::placeholder,
+textarea::placeholder{
+
+    color:#94A3B8;
+
+}
+
+/* =========================================
+   Focus Effect
+========================================= */
+
+input:focus,
+textarea:focus,
+select:focus{
+
+    outline:none;
+
+    border-color:#2563EB;
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.20);
+
+}
+
+/* =========================================
+   File Upload
+========================================= */
+
+input[type="file"]{
+
+    padding:12px;
+
+    cursor:pointer;
+
+}
+
+/* =========================================
+   Section Hover
+========================================= */
+
+.form-card{
+
+    transition:.35s;
+
+}
+
+.form-card:hover{
+
+    transform:translateY(-4px);
+
+    border-color:#2563EB;
+
+}
+
+/* =========================================
+   Responsive
+========================================= */
+
+@media(max-width:900px){
+
+.grid-2{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.form-card{
+
+    padding:22px;
+
+}
+
+.form-card h2{
+
+    font-size:20px;
+
+}
+
+}
+
+/* ===========================================
+   Section Header
+=========================================== */
+.section-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    margin-bottom:25px;
+    flex-wrap:wrap;
+}
+
+.section-header h2,
+.section-header h3{
+
+margin:0;
+
+font-size:22px;
+
+color:#ffffff;
+
+}
+
+/* ===========================================
+   Add Button
+=========================================== */
+
+.add-btn{
+
+padding:10px 18px;
+
+border:none;
+
+border-radius:10px;
+
+cursor:pointer;
+
+background:#2563EB;
+
+color:white;
+
+font-size:15px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.add-btn:hover{
+
+transform:translateY(-2px);
+
+background:#1D4ED8;
+
+}
+
+/* ===========================================
+   Dynamic Cards
+=========================================== */
+
+.education-item,
+.skill-item,
+.experience-item,
+.project-item,
+.certification-item{
+
+padding:20px;
+
+margin-bottom:25px;
+
+border-radius:14px;
+
+background:#16213E;
+
+border:1px solid rgba(255,255,255,.08);
+
+}
+
+/* ===========================================
+   Resume Preview
+=========================================== */
+
+.resume-preview-section{
+
+margin:40px 0;
+
+display:flex;
+
+flex-direction:column;
+
+gap:25px;
+
+}
+
+.preview-actions,
+.template-options{
+
+background:#1E293B;
+
+padding:25px;
+
+border-radius:15px;
+
+}
+
+.action-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+gap:15px;
+
+margin-top:20px;
+
+}
+
+.primary-btn,
+.secondary-btn{
+
+padding:14px;
+
+border:none;
+
+border-radius:10px;
+
+cursor:pointer;
+
+font-size:15px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.primary-btn{
+
+background:#2563EB;
+
+color:#fff;
+
+}
+
+.secondary-btn{
+
+background:#334155;
+
+color:white;
+
+}
+
+.primary-btn:hover,
+.secondary-btn:hover{
+
+transform:translateY(-2px);
+
+}
+
+.resume-preview-card{
+
+background:white;
+
+border-radius:18px;
+
+padding:40px;
+
+min-height:700px;
+
+box-shadow:0 10px 35px rgba(0,0,0,.25);
+
+}
+#resumePreview{
+
+    width:100%;
+
+    min-height:700px;
+
+    overflow:auto;
+
+}
+.preview-placeholder{
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+height:600px;
+
+text-align:center;
+
+color:#555;
+
+}
+
+.preview-placeholder i{
+
+font-size:80px;
+
+margin-bottom:20px;
+
+color:#2563EB;
+
+}
+
+.preview-placeholder h3{
+
+font-size:28px;
+
+margin-bottom:12px;
+
+}
+
+/* ===========================================
+   Responsive
+=========================================== */
+
+@media(max-width:768px){
+
+.section-header{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+.action-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.resume-preview-card{
+
+padding:20px;
+
+}
+
+}
+
+.remove-btn{
+
+float:right;
+
+background:#ef4444;
+
+color:white;
+
+border:none;
+
+padding:8px 16px;
+
+border-radius:8px;
+
+cursor:pointer;
+
+margin-bottom:15px;
+
+font-weight:600;
+
+}
+
+.remove-btn:hover{
+
+background:#dc2626;
+
+}
+.education-title{
+
+margin-bottom:20px;
+
+font-size:20px;
+
+font-weight:700;
+
+color:#60A5FA;
+
+border-bottom:1px solid #374151;
+
+padding-bottom:10px;
+
+}
+.skill-title{
+
+margin-bottom:20px;
+
+font-size:20px;
+
+font-weight:700;
+
+color:#22C55E;
+
+border-bottom:1px solid #374151;
+
+padding-bottom:10px;
+
+}
+.experience-title{
+
+margin-bottom:20px;
+
+font-size:20px;
+
+font-weight:700;
+
+color:#F59E0B;
+
+border-bottom:1px solid #374151;
+
+padding-bottom:10px;
+
+}
+.resume-paper{
+
+    background:#ffffff;
+
+    color:#111827;
+
+    padding:40px;
+
+    border-radius:12px;
+
+    min-height:700px;
+
+}
+
+.resume-paper h1{
+
+font-size:32px;
+
+margin-bottom:10px;
+
+}
+
+.resume-paper h2{
+
+margin-top:30px;
+
+border-bottom:2px solid #ddd;
+
+padding-bottom:8px;
+
+font-size:22px;
+
+}
+
+.resume-paper p{
+
+line-height:1.7;
+
+}
+/* =========================================
+   Resume Builder V2 Layout
+========================================= */
+.resume-builder-layout{
+    display:flex;
+    align-items:flex-start;
+    gap:30px;
+    width:100%;
+}
+
+.resume-form-panel{
+    flex: 1;
+    min-width: 0;
+}
+
+.resume-preview-panel{
+    width:420px;
+    flex-shrink:0;
+    position:sticky;
+    top:20px;
+    overflow:auto;
+}
+.live-preview-card{
+    width:100%;
+    overflow:auto;
+    background:#1E293B;
+    border-radius:15px;
+    padding:20px;
+    border:1px solid #334155;
+}
+.live-resume-paper{
+    width:794px;
+    min-height:1123px;
+    background:#fff;
+    padding:35px;
+    border-radius:12px;
+    margin:0 auto;
+}
+
+.resume-paper h1{
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.resume-paper h2{
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 5px;
+}
+
+.resume-paper p{
+    line-height: 1.6;
+    color: #374151;
+}
+
+/* Responsive */
+
+@media(max-width:1200px){
+
+    .resume-builder-layout{
+        flex-direction: column;
+    }
+
+    .resume-preview-panel{
+        width:100%;
+        position:static;
+    }
+
+}
+.resume-header{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.resume-header h1{
+    margin:0;
+    font-size:32px;
+    font-weight:700;
+}
+
+.resume-header p{
+    margin:8px 0;
+    color:#555;
+    font-size:18px;
+}
+
+.resume-contact{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+    font-size:14px;
+    color:#444;
+}
+.separator{
+    color:#888;
+    font-weight:600;
+    margin:0 6px;
+}
+/* =======================================
+   Resume Section Headings
+======================================= */
+
+.live-resume-paper h2{
+    font-size:16px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:#1f2937;
+   border-left:3px solid #2563eb;
+    padding-left:10px;
+    margin-top:25px;
+    margin-bottom:12px;
+    font-weight:700;
+}
+
+.live-resume-paper hr{
+    border:none;
+    border-top:1px solid #d1d5db;
+    margin:18px 0;
+}
+.live-resume-paper{
+    line-height:1.7;
+    color:#333;
+}
+
+.live-resume-paper p{
+    margin:6px 0;
+}
+
+.live-resume-paper strong{
+    color:#111827;
+}
+#previewSkills ul{
+    list-style:none;
+    padding:0;
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+}
+
+#previewSkills li{
+    background:#eef4ff;
+    border:1px solid #c7d2fe;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:500;
+}
+.live-resume-paper h2{
+    margin-top:18px;
+    margin-bottom:8px;
+}
+
+.live-resume-paper hr{
+    margin:12px 0;
+}
+.live-resume-paper{
+
+    background:#fff;
+
+    width:794px;
+
+    min-height:1123px;
+
+    padding:35px;
+
+    border-radius:12px;
+
+    box-shadow:0 4px 20px rgba(0,0,0,.08);
+
+    margin:auto;
+
+    box-sizing:border-box;
+
+}
+/* =========================================
+   Common Buttons
+========================================= */
+
+.btn{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    padding:14px 24px;
+
+    border:none;
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:15px;
+    font-weight:600;
+
+    transition:.3s;
+
+    text-decoration:none;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.btn-primary{
+
+    background:#2563EB;
+    color:#fff;
+
+}
+
+.btn-primary:hover{
+
+    background:#1D4ED8;
+
+}
+
+.btn-danger{
+
+    background:#EF4444;
+    color:#fff;
+
+}
+
+.btn-danger:hover{
+
+    background:#DC2626;
+
+}

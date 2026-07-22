@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>AI Career Mentor | Resume Builder</title>
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<link rel="stylesheet"
+href="css/resume.css">
+
+</head>
+
+<body>
+
+<!-- Sidebar -->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+<h2>AI Career Mentor</h2>
+
+</div>
+
+<ul>
+
+<li>
+<a href="dashboard.html">
+<i class="fa-solid fa-house"></i>
+Dashboard
+</a>
+</li>
+
+<li class="active">
+<a href="resume.html">
+<i class="fa-solid fa-file-lines"></i>
+Resume Builder
+</a>
+</li>
+
+<li>
+<a href="ats.html">
+<i class="fa-solid fa-chart-column"></i>
+ATS Score
+</a>
+</li>
+
+<li>
+<a href="jobs.html">
+<i class="fa-solid fa-briefcase"></i>
+Jobs
+</a>
+</li>
+
+<li>
+<a href="career-roadmap.html">
+<i class="fa-solid fa-road"></i>
+Career Roadmap
+</a>
+</li>
+
+<li>
+<a href="mock-interview.html">
+<i class="fa-solid fa-microphone"></i>
+Mock Interview
+</a>
+</li>
+
+<li>
+<a href="profile.html">
+<i class="fa-solid fa-user"></i>
+Profile
+</a>
+</li>
+
+<li>
+<a href="settings.html">
+<i class="fa-solid fa-gear"></i>
+Settings
+</a>
+</li>
+
+<li>
+<a href="login.html">
+<i class="fa-solid fa-right-from-bracket"></i>
+Logout
+</a>
+</li>
+
+</ul>
+
+</aside>
+
+<!-- Main -->
+
+<main class="main-content">
+
+<header class="top-navbar">
+
+<h1>Resume Builder </h1>
+
+<p>Create ATS Friendly Professional Resume
+     with AI Assistance.</p>
+
+</header>
+
+<section class="hero-card">
+
+<div class="hero-left">
+
+<h2>Build Your Professional Resume 🚀</h2>
+
+<p>
+
+Create your resume,
+improve ATS score,
+download PDF,
+and analyze your resume using AI.
+
+</p>
+
+</div>
+
+<div class="hero-right">
+
+<i class="fa-solid fa-file-circle-check"></i>
+
+</div>
+
+</section>
+<div class="resume-builder-layout">
+
+    <!-- Left Panel Start -->
+    <div class="resume-form-panel">
+<section class="quick-actions">
+
+<button id="generateResumeBtn">
+
+<i class="fa-solid fa-wand-magic-sparkles"></i>
+
+Generate Resume
+
+</button>
+
+<button id="downloadPdfBtn">
+
+<i class="fa-solid fa-download"></i>
+
+Download Resume
+
+</button>
+<button id="saveDraftBtn" class="btn btn-secondary">
+    <i class="fas fa-save"></i>
+    Save Draft
+</button>
+<button id="clearDraftBtn" class="btn btn-danger">
+    <i class="fas fa-trash"></i>
+    Clear Draft
+</button>
+</section>
+
+<div class="form-card">
+<h2>
+
+<i class="fa-solid fa-user"></i>
+
+Candidate Information
+
+</h2>
+
+<div class="grid-2">
+
+<div class="form-group">
+
+<label>Full Name</label>
+
+<input
+type="text"
+id="fullName"
+placeholder="Enter your full name">
+
+</div>
+
+<div class="form-group">
+
+<label>Email</label>
+
+<input
+type="email"
+id="email"
+placeholder="Enter your email">
+
+</div>
+
+<div class="form-group">
+
+<label>Phone</label>
+
+<input
+type="text"
+id="phone"
+placeholder="Enter phone number">
+
+</div>
+
+<div class="form-group">
+
+<label>Current City</label>
+
+<input
+type="text"
+id="city"
+placeholder="Current City">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ========================================= -->
+<!-- Career Details -->
+<!-- ========================================= -->
+
+<section class="resume-form">
+
+    <div class="form-card">
+
+        <h2>
+            <i class="fa-solid fa-briefcase"></i>
+            Career Details
+        </h2>
+
+        <div class="grid-2">
+
+            <div class="form-group">
+
+                <label>Career Objective</label>
+
+                <textarea
+                    id="careerObjective"
+                    rows="5"
+                    placeholder="Write your career objective..."></textarea>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Professional Summary</label>
+
+                <textarea
+                    id="professionalSummary"
+                    rows="5"
+                    placeholder="Write your professional summary..."></textarea>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ========================================= -->
+<!-- Career Profile -->
+<!-- ========================================= -->
+
+<section class="mae-form">
+
+<div class="form-card">
+
+<h2>
+
+<i class="fa-solid fa-user-tie"></i>
+
+Career Profile
+
+</h2>
+
+<div class="grid-2">
+
+<div class="form-group">
+
+<label>Industry</label>
+
+<select id="industry">
+
+<option value="">Select Industry</option>
+
+<option>Information Technology</option>
+
+<option>Healthcare</option>
+
+<option>Education</option>
+
+<option>Finance</option>
+
+<option>Marketing</option>
+
+<option>Government</option>
+
+<option>Other</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>Experience Level</label>
+
+<select id="experienceLevel">
+
+<option>Fresher</option>
+
+<option>Intern</option>
+
+<option>0-1 Years</option>
+
+<option>1-3 Years</option>
+
+<option>3-5 Years</option>
+
+<option>5+ Years</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>Preferred Job Role</label>
+
+<input
+type="text"
+id="targetRole"
+placeholder="Example: Frontend Developer">
+
+</div>
+
+<div class="form-group">
+
+<label>Preferred Location</label>
+
+<input
+type="text"
+id="preferredLocation"
+placeholder="Example: Lucknow">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- Academic Background -->
+<!-- ========================================= -->
+
+<section class="resume-form">
+
+    <div class="form-card">
+
+        <div class="section-header">
+
+            <h2>
+                <i class="fa-solid fa-graduation-cap"></i>
+                Academic Background
+            </h2>
+
+            <button
+                type="button"
+                id="addEducationBtn"
+                class="add-btn">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add Qualification
+
+            </button>
+
+        </div>
+
+        <div id="educationContainer">
+
+            <div class="education-item">
+
+                <h3 class="education-title">
+                    Qualification #1
+                </h3>
+
+                <div class="grid-2">
+
+                    <div class="form-group">
+
+                        <label>Qualification Level</label>
+
+                        <select class="qualificationLevel">
+
+                            <option value="">Select Qualification</option>
+                            <option>10th</option>
+                            <option>12th</option>
+                            <option>ITI</option>
+                            <option>Diploma</option>
+                            <option>Bachelor's Degree</option>
+                            <option>Master's Degree</option>
+                            <option>Doctorate (PhD)</option>
+                            <option>Professional Certification</option>
+                            <option>Other</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Course / Degree</label>
+
+                        <input
+                            type="text"
+                            class="degreeName"
+                            placeholder="Example: B.Tech">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Specialization</label>
+
+                        <input
+                            type="text"
+                            class="specialization"
+                            placeholder="Example: Computer Science">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Institute / College</label>
+
+                        <input
+                            type="text"
+                            class="collegeName"
+                            placeholder="College Name">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>University / Board</label>
+
+                        <input
+                            type="text"
+                            class="university"
+                            placeholder="University Name">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Passing Year</label>
+
+                        <input
+                            type="number"
+                            class="passingYear"
+                            placeholder="2026">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Grade / CGPA</label>
+
+                        <input
+                            type="text"
+                            class="grade"
+                            placeholder="8.5 CGPA / 82%">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Status</label>
+
+                        <select class="educationStatus">
+
+                            <option>Pursuing</option>
+                            <option>Completed</option>
+                            <option>Discontinued</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ========================================= -->
+<!-- Professional Skills -->
+<!-- ========================================= -->
+
+<section class="resume-form">
+
+    <div class="form-card">
+
+        <div class="section-header">
+
+            <h2>
+
+                <i class="fa-solid fa-lightbulb"></i>
+
+                Professional Skills
+
+            </h2>
+
+            <button
+                type="button"
+                id="addSkillBtn"
+                class="add-btn">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add Skill
+
+            </button>
+
+        </div>
+
+        <div id="skillsContainer">
+
+            <div class="skill-item">
+
+                <h3 class="skill-title">
+
+                    Skill #1
+
+                </h3>
+
+                <div class="grid-2">
+
+                    <div class="form-group">
+
+                        <label>Skill Name</label>
+
+                        <input
+                            type="text"
+                            class="skillName"
+                            placeholder="Example: JavaScript">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Category</label>
+
+                        <select class="skillCategory">
+
+                            <option>Technical</option>
+                            <option>Soft Skill</option>
+                            <option>Language</option>
+                            <option>Management</option>
+                            <option>Other</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Proficiency</label>
+
+                        <select class="skillLevel">
+
+                            <option>Beginner</option>
+                            <option>Intermediate</option>
+                            <option>Advanced</option>
+                            <option>Expert</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Experience</label>
+
+                        <input
+                            type="text"
+                            class="skillExperience"
+                            placeholder="Example: 2 Years">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ========================================= -->
+<!-- Work Experience -->
+<!-- ========================================= -->
+
+<section class="resume-form">
+
+    <div class="form-card">
+
+        <div class="section-header">
+
+            <h2>
+                <i class="fa-solid fa-briefcase"></i>
+                Work Experience
+            </h2>
+
+            <button
+                type="button"
+                id="addExperienceBtn"
+                class="add-btn">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add Experience
+
+            </button>
+
+        </div>
+
+        <div id="experienceContainer">
+
+            <div class="experience-item">
+
+                <h3 class="experience-title">
+                    Experience #1
+                </h3>
+
+                <div class="grid-2">
+
+                    <div class="form-group">
+
+                        <label>Job Title</label>
+
+                        <input
+                            type="text"
+                            class="jobTitle"
+                            placeholder="Frontend Developer">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Company Name</label>
+
+                        <input
+                            type="text"
+                            class="companyName"
+                            placeholder="ABC Pvt. Ltd.">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Employment Type</label>
+
+                        <select class="employmentType">
+
+                            <option>Full Time</option>
+                            <option>Part Time</option>
+                            <option>Internship</option>
+                            <option>Freelance</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Location</label>
+
+                        <input
+                            type="text"
+                            class="jobLocation"
+                            placeholder="Lucknow">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Start Date</label>
+
+                        <input
+                            type="month"
+                            class="startDate">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>End Date</label>
+
+                        <input
+                            type="month"
+                            class="endDate">
+
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Job Description</label>
+
+                    <textarea
+                        class="jobDescription"
+                        rows="4"
+                        placeholder="Describe your responsibilities..."></textarea>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- Projects -->
+<!-- ========================================= -->
+
+<section class="resume-form">
+
+    <div class="form-card">
+
+        <div class="section-header">
+
+            <h2>
+                <i class="fa-solid fa-code"></i>
+                Projects
+            </h2>
+
+            <button
+                type="button"
+                id="addProjectBtn"
+                class="add-btn">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add Project
+
+            </button>
+
+        </div>
+
+        <div id="projectsContainer">
+
+            <div class="project-item">
+
+                <h3 class="project-title">
+                    Project #1
+                </h3>
+
+                <div class="grid-2">
+
+                    <div class="form-group">
+
+                        <label>Project Title</label>
+
+                        <input
+                            type="text"
+                            class="projectName"
+                            placeholder="AI Career Mentor">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Project Type</label>
+
+                        <select class="projectType">
+
+                            <option>Academic</option>
+                            <option>Personal</option>
+                            <option>Freelance</option>
+                            <option>Open Source</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Technologies Used</label>
+
+                        <input
+                            type="text"
+                            class="projectTech"
+                            placeholder="HTML, CSS, JavaScript, Node.js">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Your Role</label>
+
+                        <input
+                            type="text"
+                            class="projectRole"
+                            placeholder="Full Stack Developer">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Start Date</label>
+
+                        <input
+                            type="month"
+                            class="projectStartDate">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>End Date</label>
+
+                        <input
+                            type="month"
+                            class="projectEndDate">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>GitHub Repository</label>
+
+                        <input
+                            type="url"
+                            class="githubLink"
+                            placeholder="https://github.com/...">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Live Demo</label>
+
+                        <input
+                            type="url"
+                            class="liveDemo"
+                            placeholder="https://yourproject.com">
+
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Project Description</label>
+
+                    <textarea
+                        class="projectDescription"
+                        rows="4"
+                        placeholder="Describe your project..."></textarea>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Key Features</label>
+
+                    <textarea
+                        class="projectFeatures"
+                        rows="3"
+                        placeholder="Feature 1, Feature 2, Feature 3"></textarea>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ========================================= -->
+<!-- Certifications -->
+<!-- ========================================= -->
+
+<section class="resume-form">
+
+    <div class="form-card">
+
+        <div class="section-header">
+
+            <h2>
+                <i class="fa-solid fa-certificate"></i>
+                Certifications
+            </h2>
+
+            <button
+                type="button"
+                id="addCertificationBtn"
+                class="add-btn">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add Certification
+
+            </button>
+
+        </div>
+
+        <div id="certificationContainer">
+
+            <div class="certification-item">
+
+                <h3 class="certification-title">
+                    Certification #1
+                </h3>
+
+                <div class="grid-2">
+
+                    <div class="form-group">
+                        <label>Certification Name</label>
+                        <input
+                            type="text"
+                            class="certificationName"
+                            placeholder="AWS Cloud Practitioner">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Issued By</label>
+                        <input
+                            type="text"
+                            class="issuedBy"
+                            placeholder="Amazon Web Services">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Issue Date</label>
+                        <input
+                            type="month"
+                            class="issueDate">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Expiry Date</label>
+                        <input
+                            type="month"
+                            class="expiryDate">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Credential ID</label>
+                        <input
+                            type="text"
+                            class="credentialId"
+                            placeholder="ABC123456">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Credential URL</label>
+                        <input
+                            type="url"
+                            class="credentialUrl"
+                            placeholder="https://">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- ========================================= -->
+<!-- Languages -->
+<!-- ========================================= -->
+
+<section class="resume-form">
+
+    <div class="form-card">
+
+        <div class="section-header">
+
+            <h2>
+                <i class="fa-solid fa-language"></i>
+                Languages
+            </h2>
+
+            <button
+                type="button"
+                id="addLanguageBtn"
+                class="add-btn">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add Language
+
+            </button>
+
+        </div>
+
+        <div id="languageContainer">
+
+            <div class="language-item">
+
+                <h3 class="language-title">
+                    Language #1
+                </h3>
+
+                <div class="grid-2">
+
+                    <div class="form-group">
+
+                        <label>Language</label>
+
+                        <input
+                            type="text"
+                            class="languageName"
+                            placeholder="English">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Proficiency</label>
+
+                        <select class="languageLevel">
+
+                            <option>Basic</option>
+                            <option>Intermediate</option>
+                            <option>Fluent</option>
+                            <option>Native</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+    </div>
+    <!-- RIGHT PANEL -->
+
+    <aside class="resume-preview-panel">
+
+       <div class="live-preview-card">
+
+           <div class="live-resume-paper">
+
+               <div class="resume-header">
+
+    <h1 id="previewName">Your Name</h1>
+
+    <p id="previewRole">Frontend Developer</p>
+
+    <div class="resume-contact">
+
+        <span id="previewEmail">your@email.com</span>
+<span class="separator">|</span>
+
+<span id="previewPhone">+91 9876543210</span>
+<span class="separator">|</span>
+
+<span id="previewCity">Lucknow</span>
+
+    </div>
+
+</div>
+
+<hr>
+                <hr>
+
+                <h2>Professional Summary</h2>
+
+                <p id="previewSummary">
+                    Your professional summary will appear here...
+                </p>
+<hr>
+
+<h2>Career Objective</h2>
+
+<p id="previewObjective">
+    Your career objective will appear here...
+</p>
+
+<hr>
+
+<h2>Education</h2>
+
+<div id="previewEducation">
+
+    <p>No education added.</p>
+
+</div><hr>
+
+<h2>Skills</h2>
+
+<div id="previewSkills">
+    <p>No skills added.</p>
+</div><hr>
+
+<h2>Experience</h2>
+
+<div id="previewExperience">
+
+    <p>No experience added.</p>
+
+</div>
+<hr>
+
+<h2>Projects</h2>
+
+<div id="previewProjects">
+
+    <p>No projects added.</p>
+
+</div><hr>
+
+<h2>Certifications</h2>
+
+<div id="previewCertifications">
+    <p>No certifications added.</p>
+</div><hr>
+
+<h2>Languages</h2>
+
+<div id="previewLanguages">
+
+    <p>No languages added.</p>
+
+</div>
+            </div>
+
+    </aside>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="js/resume.js"></script>
+<script src="js/experience.js"></script>
+<script src="js/projects.js"></script>
+<!--<script src="js/certifications.js"></script>-->
+<script src="js/preview.js"></script>
+
+</body>
+</html>

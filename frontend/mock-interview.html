@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI Mock Interview | AI Career Mentor</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+<link rel="stylesheet" href="css/mockInterview.css">
+
+</head>
+
+<body>
+
+<!--================ HEADER =================-->
+
+<header class="header">
+
+<div class="container nav-container">
+
+<a href="dashboard.html" class="logo">
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+<span>AI Career Mentor</span>
+
+</a>
+
+<nav class="navbar">
+
+<a href="dashboard.html">Dashboard</a>
+
+<a href="#">Interview</a>
+
+<a href="#">Results</a>
+
+<a href="#">History</a>
+
+<a href="profile.html">Profile</a>
+
+</nav>
+
+</div>
+
+</header>
+
+<!--================ HERO =================-->
+
+<section class="interview-hero">
+
+<div class="container">
+
+<div class="hero-content">
+
+<h5>
+
+🤖 AI MOCK INTERVIEW
+
+</h5>
+
+<h1>
+
+Practice Like A Real Interview
+
+</h1>
+
+<p>
+
+Choose your interview type and let AI evaluate your answers,
+communication skills and confidence.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!--================ INTERVIEW FORM =================-->
+
+<section class="interview-form">
+
+<div class="container">
+
+<div class="form-card">
+
+<h2>
+
+Start Your Interview
+
+</h2>
+
+<p>
+
+Fill in your details before starting.
+
+</p>
+
+<form id="interviewForm">
+
+<div class="input-group">
+
+<label>Full Name</label>
+
+<input
+type="text"
+id="name"
+placeholder="Enter your full name"
+required>
+
+</div>
+
+<div class="input-group">
+
+<label>Branch</label>
+
+<select id="branch">
+
+<option>CSE</option>
+
+<option>IT</option>
+
+<option>ECE</option>
+
+<option>EEE</option>
+
+<option>Mechanical</option>
+
+<option>Civil</option>
+
+</select>
+
+</div>
+
+<div class="input-group">
+
+<label>Interview Type</label>
+
+<select id="type">
+
+<option>HR Interview</option>
+
+<option>Technical Interview</option>
+
+<option>Communication</option>
+
+<option>Aptitude</option>
+
+</select>
+
+</div>
+
+<div class="input-group">
+
+<label>Difficulty</label>
+
+<select id="difficulty">
+
+<option>Easy</option>
+
+<option>Medium</option>
+
+<option>Hard</option>
+
+</select>
+
+</div>
+
+<div class="input-group">
+
+<label>Skills</label>
+
+<input
+type="text"
+id="skills"
+placeholder="HTML, CSS, JavaScript, Node.js">
+
+</div>
+
+<button
+type="submit"
+class="start-btn">
+
+Start Interview
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+<!--================ QUESTION SECTION =================-->
+
+<section class="question-section">
+
+<div class="container">
+
+<div class="question-container">
+
+<div class="question-card">
+
+<div class="question-top">
+
+<h3>
+
+Question <span id="questionNumber">1</span>
+
+</h3>
+
+<div class="timer">
+
+<i class="fa-solid fa-clock"></i>
+
+<span id="time">60</span>s
+
+</div>
+
+</div>
+
+<h2 id="questionText">
+
+Tell me about yourself.
+
+</h2>
+
+<textarea
+
+id="answer"
+
+rows="8"
+
+placeholder="Type your answer here..."></textarea>
+
+<div class="question-buttons">
+
+<button id="nextBtn" class="primary-btn">
+
+Next Question
+
+</button>
+
+<button id="finishBtn" class="secondary-btn">
+
+Finish Interview
+
+</button>
+
+</div>
+
+</div>
+
+<!--================ SCORE CARD =================-->
+
+<div class="score-card">
+
+<h3>
+
+Live Interview Status
+
+</h3>
+
+<div class="score-item">
+
+<p>Questions Answered</p>
+
+<h2 id="answered">0</h2>
+
+</div>
+
+<div class="score-item">
+
+<p>Current Score</p>
+
+<h2 id="currentScore">0%</h2>
+
+</div>
+
+<div class="score-item">
+
+<p>Confidence</p>
+
+<h2 id="confidence">--</h2>
+
+</div>
+
+<div class="score-item">
+
+<p>Grammar</p>
+
+<h2 id="grammar">--</h2>
+
+</div>
+
+<div class="score-item">
+
+<p>Communication</p>
+
+<h2 id="communication">--</h2>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!--================ RESULT SECTION =================-->
+
+<section class="result-section">
+
+<div class="container">
+
+<div class="result-card">
+
+<h2>
+
+🎉 Interview Completed
+
+</h2>
+
+<p>
+
+Congratulations! Here is your interview performance.
+
+</p>
+
+<div class="result-grid">
+
+<div class="result-box">
+
+<h3>Overall Score</h3>
+
+<h1 id="finalScore">85%</h1>
+
+</div>
+
+<div class="result-box">
+
+<h3>Confidence</h3>
+
+<h1 id="finalConfidence">90%</h1>
+
+</div>
+
+<div class="result-box">
+
+<h3>Communication</h3>
+
+<h1 id="finalCommunication">88%</h1>
+
+</div>
+
+<div class="result-box">
+
+<h3>Grammar</h3>
+
+<h1 id="finalGrammar">92%</h1>
+
+</div>
+
+</div>
+
+<div class="feedback">
+
+<h3>
+
+AI Feedback
+
+</h3>
+
+<p id="feedbackText">
+
+Great performance! Improve your confidence while answering technical questions and maintain eye contact during interviews.
+
+</p>
+
+</div>
+
+<div class="result-buttons">
+
+<button class="primary-btn" id="downloadReport">
+
+Download Report
+
+</button>
+
+<button class="secondary-btn" onclick="location.reload()">
+
+Take Interview Again
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<script src="js/mockInterview.js"></script>
+
+</body>
+
+</html>
